@@ -1,13 +1,193 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    *::selection {
+        background: #04C2C9;
+    }
+
+    *::-moz-selection {
+        background: #04C2C9;
+    }
+
+    html {
+        scroll-behavior: smooth !important;
+    }
+
+    html:-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background-color: #252934;
+        border-radius: 10px;
+    }
+
+    html::-webkit-scrollbar {
+        width: 6px;
+        background-color: #252934;
+    }
+
+    html::-webkit-scrollbar-thumb {
+        background-color: #04C2C9;
+        border-radius: 10px;
+    }
+
+    body {
+        overflow-x: hidden !important;
+    }
+
+    textarea {
+        resize: none;
+    }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+    .my-container {
+        @apply px-3 sm:px-6 md:px-10 lg:px-20 xl:px-24;
+    }
+
+    .section-heading {
+        @apply text-center text-4.5xl text-dark uppercase font-medium;
+    }
+
+    .section-heading::after {
+        display: block;
+        content: '';
+        width: 100%;
+        height: 4px;
+        background: #252934;
+        width: 65px;
+        margin: 0 auto;
+        transform: translateY(5px);
+    }
+
+    .section-heading-white {
+        @apply text-center text-4.5xl text-white uppercase font-medium;
+    }
+
+    .section-heading-white::after {
+        display: block;
+        content: '';
+        width: 100%;
+        height: 4px;
+        background: #fff;
+        width: 65px;
+        margin: 0 auto;
+        transform: translateY(5px);
+    }
+
+    .btn-burger {
+        @apply flex p-0 md:hidden !important;
+    }
+
+    .nav-link {
+        @apply block opacity-0 md:opacity-100 hover:text-primary transition-all duration-500 ease-in;
+    }
+
+    .active {
+        @apply text-primary;
+    }
+
+    .btn-home {
+        transition: border-color 300ms ease-in, background 300ms ease-in !important;
+    }
+
+    .btn-primary {
+        @apply bg-primary text-white !important;
+    }
+
+    .btn-outline-primary {
+        @apply transition-colors duration-300 ease-in border border-primary text-primary hover:bg-primary hover:text-white hover:border-transparent !important;
+    }
+    
+    .btn-home:hover {
+        border-color: #04C2C9 !important;
+        background: #04C2C9 !important;
+    }
+    
+    .btn-home .MuiButton-endIcon {
+        transition: transform 300ms ease-in !important;
+    }
+    
+    .btn-home:hover .MuiButton-endIcon {
+        transform: rotateZ(90deg) !important;
+    }
+    
+    .navbar ul {
+        transition: max-height 500ms ease-in, padding 500ms ease-in;
+    }
+    
+    .navbar ul.burger-active {
+        max-height: 100vh;
+    }
+    
+    .navbar ul.burger-active .nav-link {
+        opacity: 1;
+    }
+
+    .hexagon::before,
+    .hexagon::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+    }
+
+    .hexagon::before {
+        bottom: 100%;
+        border-bottom: 28.87px solid #04C2C9;
+    }
+
+    .hexagon::after {
+        top: 100%;
+        width: 0;
+        border-top: 28.87px solid #04C2C9;
+    }
+
+    .hex-avatar-top:after,
+    .hex-avatar-bottom:after {
+        content: "";
+        position: absolute;
+        width: 240.0000px;
+        height: 138.5640646055102px;
+        transform: rotate(45deg) scaleY(1.7321) translateY(-69.2820px);
+        transform-origin: 0 0;
+        background: inherit;
+    }
+
+    .hex-avatar-top {
+        top: -88.3883px;
+        border-top: solid 7.0711px #64c7cc;
+        border-right: solid 7.0711px #64c7cc;
+    }
+
+    .hex-avatar-top:after {
+        background-position: center top;
+    }
+
+    .hex-avatar-bottom {
+        bottom: -88.3883px;
+        border-bottom: solid 7.0711px #64c7cc;
+        border-left: solid 7.0711px #64c7cc;
+    }
+    
+    .hex-avatar-bottom:after {
+        background-position: center bottom;
+    }
+    
+    .hexagon-avatar:after {
+        content: "";
+        position: absolute;
+        top: 2.8868px;
+        left: 0;
+        width: 240.0000px;
+        height: 138.5641px;
+        z-index: 2;
+        background: inherit;
+    }
+
+    .social-item {
+        background: #262F38;
+        @apply p-4 shadow-md hover:bg-primary transform hover:scale-105 cursor-pointer transition-all ease-in duration-300 !important;
+    }
 }
