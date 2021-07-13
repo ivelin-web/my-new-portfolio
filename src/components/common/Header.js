@@ -71,7 +71,7 @@ export default function Header() {
             </button>
             <nav className="relative navbar w-full md:w-auto my-container">
                 <ul className={`bg-dark-blue md:bg-transparent absolute md:relative w-full md:w-auto top-3.5 left-0 md:top-0 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 shadow-md md:shadow-none z-50 font-semibold overflow-hidden max-h-0 md:max-h-full my-container md:px-0 ${isMobileMenuOpen ? "burger-active py-3" : ""}`}>
-                    <ScrollSpy offsetTop="50" duration="2000">
+                    <ScrollSpy className="active-link" offsetTop="50" duration="2000">
                         <a onClick={handleClickButton} className="nav-link" href="#home" ref={createRef()}>
                             Home
                         </a>

@@ -71,16 +71,16 @@
         transform: translateY(5px);
     }
 
+    .active-link {
+        @apply text-primary;
+    }
+
     .btn-burger {
         @apply flex p-0 md:hidden !important;
     }
 
     .nav-link {
         @apply block opacity-0 md:opacity-100 hover:text-primary transition-all duration-500 ease-in;
-    }
-
-    .active {
-        @apply text-primary;
     }
 
     .btn-home {
