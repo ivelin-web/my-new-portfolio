@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { AccountCircle, Menu } from "@material-ui/icons";
+import React, { useState, useEffect, createRef } from "react";
+import { Menu } from "@material-ui/icons";
+import ScrollSpy from "react-scrollspy-navigation";
 
 const MOBILE_MENU_CLOSE_DURATION = 1000;
 
@@ -62,42 +63,31 @@ export default function Header() {
 
     return (
         <header className={`flex flex-wrap flex-row justify-between md:items-center md:space-x-4 py-3 bg-dark-blue text-white shadow-md fixed top-0 w-full border-b-3 border-primary ${!isHeaderAnimationOn ? "md:bg-transparent md:shadow-none md:border-0" : ""} transition-all duration-300 ease-in`} style={{ zIndex: 1000 }}>
-            <a href="#" className="my-container text-white hover:text-primary transition-colors duration-500 text-2xl font-medium block">
+            <a href="" onClick={(e) => e.preventDefault()} className="my-container pr-0 text-white hover:text-primary transition-colors duration-500 text-2xl font-medium block">
                 <span className="mr-2">Ivelin Ivanov</span>
-                <AccountCircle style={{ fontSize: 30 }} />
             </a>
-
             <button onClick={handleClickButton} className="my-container block md:hidden text-white">
                 <Menu fontSize="large" />
             </button>
-
             <nav className="relative navbar w-full md:w-auto my-container">
                 <ul className={`bg-dark-blue md:bg-transparent absolute md:relative w-full md:w-auto top-3.5 left-0 md:top-0 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 shadow-md md:shadow-none z-50 font-semibold overflow-hidden max-h-0 md:max-h-full my-container md:px-0 ${isMobileMenuOpen ? "burger-active py-3" : ""}`}>
-                    <li onClick={handleClickButton} className="nav-item">
-                        <a className="nav-link active" href="#home">
+                    <ScrollSpy offsetTop="50" duration="2000">
+                        <a onClick={handleClickButton} className="nav-link" href="#home" ref={createRef()}>
                             Home
                         </a>
-                    </li>
-                    <li onClick={handleClickButton} className="nav-item">
-                        <a className="nav-link" href="#about">
+                        <a onClick={handleClickButton} className="nav-link" href="#about" ref={createRef()}>
                             About
                         </a>
-                    </li>
-                    <li onClick={handleClickButton} className="nav-item">
-                        <a className="nav-link" href="#projects">
+                        <a onClick={handleClickButton} className="nav-link" href="#projects" ref={createRef()}>
                             Projects
                         </a>
-                    </li>
-                    <li onClick={handleClickButton} className="nav-item">
-                        <a className="nav-link" href="#certificates">
+                        <a onClick={handleClickButton} className="nav-link" href="#certificates" ref={createRef()}>
                             Certificates
                         </a>
-                    </li>
-                    <li onClick={handleClickButton} className="nav-item">
-                        <a className="nav-link" href="#contact">
+                        <a onClick={handleClickButton} className="nav-link" href="#contact" ref={createRef()}>
                             Contact
                         </a>
-                    </li>
+                    </ScrollSpy>
                 </ul>
             </nav>
         </header>
