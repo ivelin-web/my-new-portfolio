@@ -8,6 +8,20 @@ import { Button } from "@material-ui/core";
 import { ArrowForward } from "@material-ui/icons";
 
 export default function Home() {
+    const handleClick = (e) => {
+        e.preventDefault();
+
+        const href = e.currentTarget.getAttribute("href");
+
+        const bonusOffsetTop = 50;
+        const elementOffsetTop = document.querySelector(href).offsetTop - bonusOffsetTop;
+
+        window.scroll({
+            top: elementOffsetTop,
+            behavior: "smooth",
+        });
+    };
+
     return (
         <section id="home" className="relative">
             <Particles
@@ -76,7 +90,7 @@ export default function Home() {
                     Hello, I'm <span className="text-secondary font-medium">Ivelin Ivanov</span>.
                 </h1>
                 <h1 className="mb-4">I'm a full-stack web developer</h1>
-                <Button href="#about" variant="outlined" size="large" endIcon={<ArrowForward />} style={{ color: "#fff", borderColor: "#fff" }} className="btn-home">
+                <Button onClick={handleClick} href="#about" variant="outlined" size="large" endIcon={<ArrowForward />} style={{ color: "#fff", borderColor: "#fff" }} className="btn-home">
                     View my skills
                 </Button>
             </div>
