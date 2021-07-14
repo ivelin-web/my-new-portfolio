@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/my-new-portfolio/static/css/main.cb58f079.chunk.css",
-    "main.js": "/my-new-portfolio/static/js/main.bcf72f31.chunk.js",
-    "main.js.map": "/my-new-portfolio/static/js/main.bcf72f31.chunk.js.map",
+    "main.css": "/my-new-portfolio/static/css/main.f3279213.chunk.css",
+    "main.js": "/my-new-portfolio/static/js/main.38795f49.chunk.js",
+    "main.js.map": "/my-new-portfolio/static/js/main.38795f49.chunk.js.map",
     "runtime-main.js": "/my-new-portfolio/static/js/runtime-main.d53484d1.js",
     "runtime-main.js.map": "/my-new-portfolio/static/js/runtime-main.d53484d1.js.map",
     "static/js/2.36092533.chunk.js": "/my-new-portfolio/static/js/2.36092533.chunk.js",
     "static/js/2.36092533.chunk.js.map": "/my-new-portfolio/static/js/2.36092533.chunk.js.map",
     "index.html": "/my-new-portfolio/index.html",
-    "static/css/main.cb58f079.chunk.css.map": "/my-new-portfolio/static/css/main.cb58f079.chunk.css.map",
+    "static/css/main.f3279213.chunk.css.map": "/my-new-portfolio/static/css/main.f3279213.chunk.css.map",
     "static/js/2.36092533.chunk.js.LICENSE.txt": "/my-new-portfolio/static/js/2.36092533.chunk.js.LICENSE.txt",
+    "static/media/angular.a6aed87f.png": "/my-new-portfolio/static/media/angular.a6aed87f.png",
     "static/media/angular.e185415c.svg": "/my-new-portfolio/static/media/angular.e185415c.svg",
     "static/media/avatar.f46e04fd.jpg": "/my-new-portfolio/static/media/avatar.f46e04fd.jpg",
     "static/media/bootstrap.98585727.svg": "/my-new-portfolio/static/media/bootstrap.98585727.svg",
@@ -38,6 +39,7 @@
     "static/media/php.7c41b199.svg": "/my-new-portfolio/static/media/php.7c41b199.svg",
     "static/media/problem-solving.d7e35d4c.png": "/my-new-portfolio/static/media/problem-solving.d7e35d4c.png",
     "static/media/react.6c1d44b8.svg": "/my-new-portfolio/static/media/react.6c1d44b8.svg",
+    "static/media/react.e89f16ff.png": "/my-new-portfolio/static/media/react.e89f16ff.png",
     "static/media/sass.8aa78a83.svg": "/my-new-portfolio/static/media/sass.8aa78a83.svg",
     "static/media/symfony.70e9abd1.svg": "/my-new-portfolio/static/media/symfony.70e9abd1.svg",
     "static/media/tailwindcss.68603ef4.svg": "/my-new-portfolio/static/media/tailwindcss.68603ef4.svg",
@@ -47,7 +49,7 @@
   "entrypoints": [
     "static/js/runtime-main.d53484d1.js",
     "static/js/2.36092533.chunk.js",
-    "static/css/main.cb58f079.chunk.css",
-    "static/js/main.bcf72f31.chunk.js"
+    "static/css/main.f3279213.chunk.css",
+    "static/js/main.38795f49.chunk.js"
   ]
 }
